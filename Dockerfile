@@ -7,8 +7,7 @@ COPY conf.d/ /etc/nginx/conf.d/
 # Copiar página de mantenimiento
 COPY maintenance/ /usr/share/nginx/html/maintenance/
 
-# Verificar que la configuración sea válida
-RUN nginx -t
+# La validación se hará en runtime cuando los servicios estén disponibles
 
 # Exponer el puerto 80
 EXPOSE 80
